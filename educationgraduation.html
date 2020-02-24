@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "dark2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "GRADUATION"
+	},
+	axisY: {
+                title: "CGPA"
+                
+        },
+        axisX: {
+                title: "SEMESTER'S"
+                
+        },
+        
+	data: [{        
+		type: "column",  
+		//showInLegend: true, 
+		legendMarkerColor: "black",
+		legendText: "MMbbl = one million barrels",
+		dataPoints: [      
+			{ y: 6.8, label: "1" },
+			{ y: 7.0,  label: "2" },
+			{ y: 5.8,  label: "3" },
+			{ y: 7.5,  label: "4" },
+			{ y: 8.2,  label: "5" },
+			{ y: 6.5, label: "6" },
+			{ y: 6.3,  label: "7" },
+			{ y: 8.7,  label: "8" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 720px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
